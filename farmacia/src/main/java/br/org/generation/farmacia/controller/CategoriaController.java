@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import br.org.generation.farmacia.model.Categoria;
-import br.org.generation.farmacia.repository.CategoriaRepository;;
+import br.org.generation.farmacia.repository.CategoriaRepository;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -38,7 +38,7 @@ public class CategoriaController {
 	}
 	
 	@GetMapping("/tipo,{tipo}")
-	public ResponseEntity<List<Categoria>> getByName(@PathVariable String tipo){
+	public ResponseEntity<List<Categoria>> getByTipo(@PathVariable String tipo){
 		return ResponseEntity.ok(repository.findAllByTipoContainingIgnoreCase(tipo));
 	}
 	
