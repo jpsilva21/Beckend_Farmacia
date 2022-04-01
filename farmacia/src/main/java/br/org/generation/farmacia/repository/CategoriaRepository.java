@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import br.org.generation.farmacia.model.Categoria;
 
 public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
-	public List<Categoria> findAllByTipoContainingIgnoreCase( String tipo );
+	public List<Categoria> findAllByFinalidadeContainingIgnoreCase( String finalidade );
 }

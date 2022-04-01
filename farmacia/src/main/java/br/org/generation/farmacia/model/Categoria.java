@@ -28,7 +28,7 @@ public class Categoria {
 	
 	@NotNull
 	@Size(max=25)
-	private String tipo;
+	private String finalidade;
 	
 	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("categoria")
@@ -50,12 +50,12 @@ public class Categoria {
 		this.marca = marca;
 	}
 
-	public String getTipo() {
-		return tipo;
+	public String getFinalidade() {
+		return finalidade;
 	}
-	
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+
+	public void setFinalidade(String finalidade) {
+		this.finalidade = finalidade;
 	}
 
 	public List<Produtos> getProdutos() {
@@ -65,7 +65,7 @@ public class Categoria {
 	public void setProdutos(List<Produtos> produtos) {
 		this.produtos = produtos;
 	}
-	
+
 	
 	
 	
